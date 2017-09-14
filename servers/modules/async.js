@@ -1,19 +1,19 @@
 var async=require('async');
 
-var students=require('./schemas.js').users;
-var teachers=require('./schemas.js').sample;
+var students=require('./schemas.js').student;
+var teachers=require('./schemas.js').teacher;
 
-function getData(callback){
+function getParallel(callback){
     var retObj={};
-    async.series({
+    async.parallel({
     one: function(callback1){
         students.find({},function(err,docs){
             callback1(null,docs);
         });
     },
     two: function(callback2){
-        teachers.find({},function(err,docs){
-            callback2(null,docs);
+        teachers.find({},function(err,tdocs){
+            callback2(null,tdocs);
         });
     }
 },
@@ -34,4 +34,4 @@ function(err, results) {
 });
 }
 
-module.exports= getData;
+module.exports= getParallel;

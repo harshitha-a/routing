@@ -1,9 +1,9 @@
 var mongoose=require('mongoose')
 
 mongoose.connect('mongodb://localhost:27017/dota')
-var Schema=mongoose.Schema
+var schema=mongoose.Schema;
 
-var dotaUsersSchema=new Schema({
+var dotaUsersSchema=new schema({
 	name: String,
 	age: Number,
 	location:String,
@@ -11,7 +11,7 @@ var dotaUsersSchema=new Schema({
 
 });
 
-var dotaSchema=new Schema({
+var dotaSchema=new schema({
 	name: String,
 	age: Number,
 	location:String,
@@ -20,10 +20,11 @@ var dotaSchema=new Schema({
 });
 
 var dotaUsersColl=mongoose.model('dotausers',dotaUsersSchema);
-var sampleColl=mongoose.model('sampledota',dotaSchema);
+var sampleColl=mongoose.model('sampledatas',dotaSchema);
 
-module.exports={users : dotaUsersColl,
-	sample : sampleColl};
+module.exports={ student : dotaUsersColl,
+	teacher : sampleColl
+};
 
 
 

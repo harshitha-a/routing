@@ -14,7 +14,7 @@ router.get('/parallel',function(req, res){
 	})
 });
 
-router.get('series',function(req,res){
+router.get('/series',function(req,res){
 	asyncSeries(function(output){
 		res.json(output);
 	})
