@@ -1,0 +1,31 @@
+{
+  "name": "routing",
+  "version": "1.0.0",
+  "description": "this project is about routing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshitha-a/routing.git"
+  },
+  "keywords": [
+    "routing"
+  ],
+  "author": "harshitha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshitha-a/routing/issues"
+  },
+  "homepage": "https://github.com/harshitha-a/routing#readme",
+  "dependencies": {
+    "async": "^2.5.0",
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.11"
+   
+  }
+}
