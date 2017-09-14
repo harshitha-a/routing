@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-var router=require('./routers.js');
+var router=require('./servers/routes/routers.js');
 app.use('/router',router);
 	
 

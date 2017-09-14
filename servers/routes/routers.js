@@ -3,8 +3,8 @@ var router = express.Router()
 
 
 
-var async=require('./async.js');
-var asyncSeries=require('./async-series.js');
+var async=require('../modules/async.js');
+var asyncSeries=require('../modules/async-series.js');
 
 
 

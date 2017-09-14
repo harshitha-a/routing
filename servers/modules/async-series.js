@@ -1,7 +1,7 @@
 var async=require('async');
 
-var students=require('./schemas.js').student;
-var teachers=require('./schemas.js').teacher;
+var students=require('../models/schemas.js').student;
+var teachers=require('../models/schemas.js').teacher;
 
 function getSeries(callback){
     var retObj={};
